@@ -1,8 +1,8 @@
-Digit recognizer for the MNIST dataset
+# Digit recognizer for the MNIST dataset
 
-Collaborators:
+## Collaborators:
 tnybny
 jay1204
 
-Contact:
+## Contact:
 tnbyny@gmail.com
