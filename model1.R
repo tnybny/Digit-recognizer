@@ -20,7 +20,7 @@ pred <- matrix(0, nrow = 10, ncol = length(Y))
 for(class in 0:9)
 {
     Yprime = ifelse(Y == class, 1, 0)
-    ctrl = glm.control(maxit = 20)
+    ctrl = glm.control(maxit = 50)
     model[[class + 1]] <- glm(Yprime ~., family = binomial(link = 'logit'),
                             data = data.frame(X, Yprime), control = ctrl)
     pred[class + 1, ] = predict(model[[class + 1]], newdata = X,
@@ -42,4 +42,4 @@ error(valFit, Yval)
 viz(Xval, valFit)
 # 32% error
 
-# In conclusion, we are likely overfitting - let's try regularization/pca next!
+# In conclusion, we are likely overfitting - let's try regularization next!
