@@ -1,5 +1,5 @@
 # Author:tnybny
-# simple dirty first model of regularized 1-vs-all logistic regression
+# model of regularized 1-vs-all logistic regression
 
 # load the data
 if(!exists("X"))
@@ -12,8 +12,8 @@ source("createSubmission.R")
 # load required libraries
 require(LiblineaR)
 
-X = rbind(X, Xval, Xtest)
-Y = c(Y, Yval, Ytest)
+X <- rbind(X, Xval, Xtest)
+Y <- c(Y, Yval, Ytest)
 
 # geomSeries <- function(base, max) {
 #     base^(0:floor(log(max, base)))
